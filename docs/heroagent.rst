@@ -33,3 +33,33 @@ HEROAgent includes two parts. One is the main part for collecting basic board da
     "AMQP", "Data uploading thourgh AMQP protocol"
     "RS232/RS485", "Collecting external sensor data through RS232/RS485"
     "Modbus", "Collecting external sensor data throught modbus protocol"
+
+Requirement
+------------
+* Hardware Requirement
+    * 9th Generation Intel Core, Pentium Gold, Celeron, and Xeon formerly Coffee Lake
+    * 8th Generation Intel Core, Pentium Gold, and Celeron formerly Whiskey Lake
+    * Intel Pentium Silver and Celeron formerly Gemini Lake
+* OS Support list
+	Ubuntu, Debian, Fedora, CentOS, OpenSUSE
+
+How to install
+--------------
+Please follow below steps to install HEROAgent:
+
+1. Copy HEROAgent_v1.0.0.zip file
+2. Unzip package::
+
+    $ unzip HEROAgent_v1.0.0.zip && cd HEROAgent_v1.0.0/
+
+3. Run install.sh for installing HEROAgent::
+
+    $ sudo ./install.sh
+
+4. Check if HEROAgent install successfully::
+
+    $ systemctl status heroagent
+
+
+
+

@@ -15,11 +15,11 @@ Architecture
 
 * Main Application:
 
-    1. Data collecting : board hw information from `HEROSDK <https://www.aaeon.com/en/ac/aaeon-hero-sdk>`_ (voltage, cpu temperature, … ) and system usage
+    1. Data collecting : getting board hardware information from cli tool based on `HEROSDK <https://www.aaeon.com/en/ac/aaeon-hero-sdk>`_ (voltage, cpu temperature, … ) and system usage
     2. Configuration : data updating frequency
     3. System manager : system controlled by linux systemd
     4. Data uploading : default using **MQTT protocol**
-    5. Device registering : board need to register to server first for device management on server
+    5. Device registering : board needs to register to server first for device management on server
     6. Plugin : addictional data uploading protocol and external sensor data collecting
 
 * Plugins:
@@ -59,21 +59,21 @@ How to install
 --------------
 Please follow below steps to install HEROAgent(Sample):
 
-#. Download HEROAgent_lite_v1.0.0.zip from :download:`here <install/HEROAgent_lite_v1.0.0.zip>`
-#. Unzip package:
+1. Download HEROAgent_lite_v1.0.0.zip from :download:`here <install/HEROAgent_lite_v1.0.0.zip>`
+2. Unzip package:
 
 .. code-block:: shell
 
     $ unzip HEROAgent_lite_v1.0.0.zip
     $ cd HEROAgent_lite_v1.0.0/
 
-#. Run install.sh for installing HEROAgent(Sample):
+3. Run install.sh for installing HEROAgent(Sample):
 
 .. code-block:: shell
 
     $ sudo ./install.sh
 
-#. Check if HEROAgent(Sample) installed successfully:
+4. Check if HEROAgent(Sample) installed successfully:
 
 .. code-block:: shell
 
@@ -89,11 +89,12 @@ Please follow below steps to install HEROAgent(Sample):
                 ├─11728 /bin/bash /usr/bin/heroagent_lite
                 └─25896 /bin/bash /usr/bin/heroagent_lite
 
-#. Using below command to listen data sent from HEROAgent(Sample):
+5. Using below command to listen data sent from HEROAgent(Sample):
 
 .. code-block:: shell
 
     $ mosquitto_sub -t "hmi/#"
+    output:
     {"hwm":[{"ext":0,"name":"Cpu0","type":7,"value":20},{"ext":0,"name":"Cpu1","type":7,"value":0},{"ext":0,"name":"Cpu2","type":7,"value":0},{"ext":0,"name":"Cpu3","type":7,"value":20},{"ext":0,"name":"Cpu4","type":7,"value":16.67},{"ext":0,"name":"Cpu5","type":7,"value":33.33},{"ext":0,"name":"Cpu6","type":7,"value":20},{"ext":0,"name":"Cpu7","type":7,"value":0},{"ext":0,"name":"memory","type":8,"value":38.73},{"ext":0,"name":"/","type":10,"value":92},{"ext":0,"name":"/boot/efi","type":10,"value":1},{"ext":0,"name":"CPU Temp","type":1,"value":0},{"ext":0,"name":"SYS Temp","type":1,"value":0},{"ext":0,"name":"3.3V","type":2,"value":0},{"ext":0,"name":"VBat","type":2,"value":0},{"ext":0,"name":"5V","type":2,"value":0},{"ext":0,"name":"12V","type":2,"value":0},{"ext":0,"name":"Vcore","type":2,"value":0},{"ext":0,"name":"Vmem","type":2,"value":0},{"ext":0,"name":"CPU Fan Speed","type":3,"value":0},{"ext":0,"name":"SYS Fan Speed","type":3,"value":0},{"ext":0,"name":"brightness 1","type":4,"value":-1}],"ts":1574144316110,"uuid":"11111111-2222-3333-4444-555555555555","ver":"2.1.0"}
     ...
 

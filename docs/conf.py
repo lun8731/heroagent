@@ -23,6 +23,7 @@ author = 'nina_han'
 
 # The full version, including alpha/beta/rc tags
 release = '0'
+version = '1.0'
 master_doc = 'index'
 
 

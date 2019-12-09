@@ -10,8 +10,8 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
+import os
+import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -19,11 +19,11 @@
 
 project = 'HEROAgent'
 copyright = '2019, sdd2@aaeon.com.tw'
-author = 'nina_han'
+author = 'sdd2'
 
 # The full version, including alpha/beta/rc tags
-release = '0'
-version = '1.0'
+release = u'1.0'
+version = u'1.0'
 master_doc = 'index'
 
 
@@ -53,10 +53,15 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # html_theme = 'classic'
 # html_theme = 'pyramid'
 html_theme = 'sphinx_rtd_theme'
+# html_style = 'css/mytheme.css'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 html_logo = 'aaeon-logo.png'
+
+def setup(app):
+   app.add_stylesheet("custom.css")
+
 html_show_sourcelink = False
